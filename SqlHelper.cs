@@ -62,7 +62,7 @@ namespace FunctionApp.Helper
                         new TokenRequestContext(new[] { "https://database.windows.net/.default" })
                     );
 
-                    // _logger.LogInformation($"New token acquired. Expires at: {_cachedToken.ExpiresOn}");
+                    _logger.LogInformation($"New token acquired.");
                 }
 
                 return _cachedToken.Token;
