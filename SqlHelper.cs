@@ -30,7 +30,7 @@ namespace FunctionApp.Helper
                     // Return a fixed token if MSI_SECRET is not set
                     _logger.LogInformation("MSI_SECRET environment variable not found. Returning fixed token.");
 
-                    string accessToken = Environment.GetEnvironmentVariable("ACCESS_TOKEN");
+                    string accessToken = "";
                     if (string.IsNullOrEmpty(accessToken))
                     {
                         _logger.LogWarning("ACCESS_TOKEN environment variable not found. Cannot return a valid token.");
